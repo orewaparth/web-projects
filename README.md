@@ -7,4 +7,11 @@ Table of Contents:-
   <li>
     Project 1 : Basic biography project of linnus linus torvalds
   </li>
+  <li>
+    projct 2: a basic portfolio website clone of
+  </li>
+  <li>
+    porject 3: card of codehelp web dev
+  </li>
+  
 </ul>
