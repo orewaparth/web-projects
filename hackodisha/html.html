@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JEE College Sorter</title>
+    <style>
+        /* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+/* Form styles */
+#college-form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+input[type="number"],
+input[type="text"],
+select {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* College list styles */
+h2 {
+    color: #333;
+}
+
+#college-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+    padding: 10
+
+    </style>
+</head>
+<body>
+    <h1>JEE College Sorter</h1>
+
+    <form id="college-form">
+        <label for="jeeRank">JEE Rank:</label>
+        <input type="number" id="jeeRank" name="jeeRank" required>
+
+        <label for="category">Category:</label>
+        <select id="category" name="category">
+            <option value="general">General</option>
+            <option value="obc">OBC</option>
+            <option value="sc">SC</option>
+            <option value="st">ST</option>
+        </select>
+
+        <label for="state">State:</label>
+        <input type="text" id="state" name="state" required>
+
+        <button type="submit">Sort Colleges</button>
+    </form>
+
+    <h2>Sorted Colleges:</h2>
+    <ul id="college-list">
+        <!-- Sorted colleges will be displayed here -->
+    </ul>
+
+    <script>
+        // Sample college data (replace with actual data)
+        const colleges = [
+            { name: "College A", rank: 100, category: "general", state: "State1" },
+            { name: "College B", rank: 200, category: "obc", state: "State2" },
+            { name: "College C", rank: 150, category: "general", state: "State1" },
+            // Add more colleges here
+        ];
+
+        // Event listener for form submission
+        document.getElementById("college-form").addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            // Get user inputs
+            const jeeRank = parseInt(document.getElementById("jeeRank").value);
+            const category = document.getElementById("category").value;
+            const state = document.getElementById("state").value;
+
+            // Filter and sort colleges based on user inputs
+            const sortedColleges = colleges.filter(college => {
+                return college.rank >= jeeRank && college.category === category && college.state === state;
+            }).sort((a, b) => a.rank - b.rank);
+
+            // Display sorted colleges
+            displayColleges(sortedColleges);
+        });
+
+        // Function to display sorted colleges
+        function displayColleges(colleges) {
+            const collegeList = document.getElementById("college-list");
+            collegeList.innerHTML = "";
+
+            colleges.forEach(college => {
+                const listItem = document.createElement("li");
+                listItem.textContent = `${college.name} - Rank: ${college.rank}`;
+                collegeList.appendChild(listItem);
+            });
+        }
+   
+    
+        /* // Fetch data from the PHP script
+        fetch('data.php')
+            .then(response => response.json())
+            .then(data => {
+                const collegeList = document.getElementById('college-list');
+                data.forEach(college => {
+                    const listItem = document.createElement('li');
+                    listItem.textContent = `${college.college_name} - Cutoff Rank: ${college.cutoff_rank}`;
+                    collegeList.appendChild(listItem);
+                });
+            })
+            .catch(error => {
+                console.error('Error fetching data:', error);
+            }); */
+    </script>
+</body>
+</html>
