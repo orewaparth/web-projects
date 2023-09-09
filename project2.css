@@ -1,0 +1,161 @@
+ #myinfo{
+    border: 1px black solid;
+    margin-left: 5vw; 
+    border-radius: 5px;
+    background-color: beige;
+    float: left;
+     margin-top: -50px; 
+    width: 300px;
+    height: 670px;
+    perspective: 1000px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+#maincontent{
+    border: 1px black solid;
+    width: 700px;
+    height: 600px;
+     margin-left: 400px;
+    padding-left: 2vw; 
+    border-radius: 15px;
+    margin-top: 80px; 
+    background-color: beige;
+     
+   
+    
+}
+
+    #myinfo::-webkit-scrollbar{
+        width: 10px;
+        height: 10px;
+        margin-right: 1px;
+       
+    }
+    #myinfo::-webkit-scrollbar-track{
+        background-color: transparent;
+       
+    }
+    #myinfo::-webkit-scrollbar-thumb
+    {
+        background-color: rgba(255, 221, 0, 0.996);
+        border: 1px ;
+        border-radius: 20px;
+        }
+        
+       
+              
+    #college-form {
+        display: flex;
+        flex-direction: column;
+        margin-top: 80px;
+    }
+    
+    label {
+        font-weight: bold;
+        margin-bottom: 5px;
+        color: #555;
+    }
+    
+    input[type="number"],
+    input[type="text"],
+    select {
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+    
+    button[type="submit"] {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        font-size: 18px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
+    /* College list styles */
+    h2 {
+        color: #333;
+    }
+    
+    #college-list {
+        list-style-type: none;
+        padding: 0;
+    }
+    
+    li {
+        margin-bottom: 10px;
+        padding: 10
+    }
+    #state{
+        width :430px;
+        position:relative;
+        left:50%;
+        margin-left:-225px;
+    }
+    #fuckyou{
+        position:relative;
+        left:18%;
+    }
+    #boomor{
+        position:relative;
+        left:18%;
+    }
+    #category{
+        width :450px;
+        position:relative;
+        left:50%;
+        margin-left:-225px;
+    }
+    #jeeRank{
+        width :430px;
+        position:relative;
+        left:50%;
+        margin-left:-225px;
+    }
+    #loda{
+        position:relative;
+        left:18%;
+    }
+    #maghia{
+        position:relative;
+        left:22%;
+        width :400px;
+    }
+    #name{
+        border: 1px solid black;
+        width: 170px;
+        height: 30px;
+        border-radius: 15px;
+         margin-left: 20px;
+    }
+    .email{
+        border: 1px solid black;
+        width: 250px;
+        height: 100px;
+        border-radius: 15px;
+        margin-top: 10px;
+        margin-left: 20px;
+    }
+    .phone{
+        border: 1px solid black;
+        width: 250px;
+        height: 100px;
+        border-radius: 15px;
+        margin-top: 10px;
+        margin-left: 20px;
+    }
+   .github{
+    border: 1px solid black;
+        width: 250px;
+        height: 100px;
+        border-radius: 15px;
+        margin-top: 10px;
+        margin-left: 20px;
+   }
+   
+   
